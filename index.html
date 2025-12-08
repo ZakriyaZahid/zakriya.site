@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Zakriya Zahid — Embedded Systems Engineer & Developer</title>
+
+    <!-- Primary SEO -->
+    <meta name="description"
+        content="Embedded systems developer (hardware + firmware). Portfolio of embedded projects: IoT, ESP32, RTOS, PCB design, firmware, and system integration. Available for remote contracts and full-time roles.">
+    <meta name="keywords"
+        content="embedded systems, firmware, pcb design, IoT, ESP32, RTOS, C++, Python, hardware engineering, electronics, remote engineer">
+    <meta name="author" content="Zakriya Zahid">
+    <link rel="canonical" href="https://zakriya.site/">
+    <meta name="robots" content="index,follow">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Zakriya Zahid — Embedded Systems Engineer">
+    <meta property="og:description"
+        content="Embedded systems developer (hardware + firmware). Browse projects in PCB design, firmware, and IoT — available for hire.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zakriya.site/">
+    <meta property="og:image" content="https://zakriya.site/og-image.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Zakriya Zahid — Embedded Systems Engineer">
+    <meta name="twitter:description"
+        content="Embedded systems developer (hardware + firmware). Portfolio of ESP32, RTOS, PCB, and IoT projects.">
+
+    <!-- Structured data (Person + Organization) -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Muhammad Zakriya",
+    "jobTitle": "Embedded Systems Engineer",
+    "url": "https://zakriya.site/",
+    "sameAs": [
+      "https://github.com/ZakriyaZahid",
+      "https://linkedin.com/in/muhammad-zakriya-zahid-bhatti"
+    ],
+    "description": "Embedded systems developer specializing in firmware, PCB design, and IoT systems."
+  }
+  </script>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity=""
+        crossorigin="anonymous">
+
+    <!-- Tailwind via CDN for quick single-file responsiveness -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --accent: #0ea5a4;
+            --muted: #6b7280
+        }
+
+        html,
+        body {
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(6px)
+        }
+
+        /* small helper for project images */
+        .project-img {
+            object-fit: cover;
+            height: 220px;
+            width: 100%
+        }
+
+        @media (min-width:1024px) {
+            .project-img {
+                height: 180px
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-b from-white to-slate-50 text-slate-800 leading-relaxed">
+    <header class="sticky top-0 z-40 bg-white/60 backdrop-blur border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#home" class="flex items-center gap-3">
+                <div
+                    class="h-10 w-10 rounded-md flex items-center justify-center bg-[var(--accent)] text-white font-bold">
+                    ZZ</div>
+                <div class="hidden sm:block">
+                    <h1 class="text-lg font-semibold">Muhammad Zakriya</h1>
+                    <p class="text-xs text-[var(--muted)]">Embedded Systems • Firmware • Hardware</p>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-6 text-sm">
+                <a href="#about" class="hover:text-[var(--accent)]">About</a>
+                <a href="#services" class="hover:text-[var(--accent)]">Services</a>
+                <a href="#portfolio" class="hover:text-[var(--accent)]">Portfolio</a>
+                <a href="#contact" class="hover:text-[var(--accent)]">Contact</a>
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener"
+                    class="px-3 py-1 border rounded-md text-sm">GitHub</a>
+            </nav>
+
+            <div class="md:hidden">
+                <button id="menuBtn" aria-label="Toggle menu"
+                    class="p-2 rounded-md focus:ring-2 focus:ring-[var(--accent)]">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white">
+            <div class="px-6 py-4 flex flex-col gap-3">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener"
+                    class="mt-2 px-3 py-1 border rounded-md text-sm inline-block">GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="home" class="max-w-6xl mx-auto px-6 py-12">
+
+        <!-- Hero / Intro -->
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+            <div class="lg:col-span-2">
+                <p class="text-sm text-[var(--muted)]">Hi — I'm an Embedded Systems Engineer</p>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">I build reliable hardware, clean firmware, and
+                    end-to-end embedded solutions.</h2>
+                <p class="mt-4 text-slate-700 max-w-2xl">I design PCBs, write real-time firmware (ESP32, STM32, RTOS),
+                    integrate sensors & comms (WiFi, BLE, LoRa), and deliver production-ready embedded products. I work
+                    with startups and product teams to ship prototypes and scale them to manufacturing.</p>
+
+                <div class="mt-6 flex gap-3">
+                    <a href="#contact"
+                        class="inline-flex items-center gap-2 bg-[var(--accent)] text-white px-4 py-2 rounded-md shadow">Hire
+                        / Contact</a>
+                    <a href="#portfolio" class="inline-flex items-center gap-2 border px-4 py-2 rounded-md">View
+                        Work</a>
+                </div>
+
+                <ul class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs text-[var(--muted)]">
+                    <li><strong>Skills</strong><br>Firmware, Hardware </li>
+                    <li><strong>Tools</strong><br>ESP32, STM32, PlatformIO</li>
+                    <li><strong>PCB</strong><br>Altium, EasyEDA, Eagle, Proteus</li>
+                    <li><strong>Languages</strong><br>(C/C++), Python, Bash</li>
+                </ul>
+            </div>
+
+            <aside class="glass p-4 rounded-md shadow lg:order-last text-center">
+
+                <!-- Profile Photo -->
+                <img src="/images/profile.jpg" alt="Zakriya Zahid - Embedded Systems Engineer Profile Photo"
+                    class="mx-auto w-40 h-40 rounded-full object-cover shadow-lg border border-slate-300"
+                    loading="lazy">
+
+                <h3 class="text-sm text-[var(--muted)]">Contact</h3>
+                <p class="font-medium">Muhammad Zakriya</p>
+                <p class="text-sm">Embedded Systems Engineer</p>
+                <div class="mt-3 text-sm text-[var(--muted)]">
+                    <div><i class="fa fa-envelope mr-2"></i> <a
+                            href="mailto:zakriyazahid1@gmail.com">zakriyazahid1@gmail.com</a></div>
+                    <div class="mt-1"><i class="fa fa-phone mr-2"></i> +92 315 4306756</div>
+                    <div class="mt-1"><i class="fa fa-map-marker-alt mr-2"></i> Lahore, Pakistan</div>
+                </div>
+                <div class="mt-4 flex gap-3">
+                    <a href="https://github.com/ZakriyaZahid" target="_blank" rel="noopener" aria-label="github"><i
+                            class="fa-brands fa-github fa-lg"></i></a>
+                    <a href="https://linkedin.com/in/muhammad-zakriya-zahid-bhatti" target="_blank" rel="noopener"
+                        aria-label="linkedin"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+                </div>
+            </aside>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="mt-12">
+            <div class="rounded-md p-6 bg-white shadow">
+                <h2 class="text-2xl font-semibold">About Me</h2>
+                <p class="mt-3 text-slate-700">I am an electrical engineer and embedded systems developer with
+                    experience building products from prototype to production. I specialize in firmware (bare-metal and
+                    RTOS), PCB design, sensor integration, and low-level debugging. My goal is to deliver robust systems
+                    that are easy to manufacture and maintain.</p>
+
+                <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <h4 class="font-medium">What I do</h4>
+                        <ul class="mt-2 text-sm text-[var(--muted)] list-disc list-inside">
+                            <li>Firmware development (C/C++, PlatformIO, FreeRTOS)</li>
+                            <li>PCB design & DFM reviews (Altium, EasyEDA, Eagle, Proteus)</li>
+                            <li>Embedded Linux / Raspberry Pi integration</li>
+                            <li>Prototyping, test fixtures, and automation</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-medium">Availability</h4>
+                        <p class="mt-2 text-sm text-[var(--muted)]">Open to remote contracts, freelance projects, and
+                            full-time roles. I prefer engagements that involve product development and problem solving
+                            across hardware and software.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services" class="mt-10">
+            <h2 class="text-2xl font-semibold">Services</h2>
+            <p class="text-[var(--muted)] mt-2">I deliver end-to-end embedded solutions or complement your team in
+                specific areas.</p>
+
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <article class="p-6 bg-white rounded-md shadow">
+                    <h3 class="font-semibold">Firmware & RTOS</h3>
+                    <p class="mt-2 text-sm text-[var(--muted)]">Real-time firmware, peripheral drivers, low-power
+                        design, OTA updates and test-driven development.</p>
+                </article>
+
+                <article class="p-6 bg-white rounded-md shadow">
+                    <h3 class="font-semibold">Hardware & PCB</h3>
+                    <p class="mt-2 text-sm text-[var(--muted)]">Schematic capture, multi-layer PCB layout,
+                        design-for-manufacturing (DFM), BOM optimization and prototyping.</p>
+                </article>
+
+                <article class="p-6 bg-white rounded-md shadow">
+                    <h3 class="font-semibold">Product Integration</h3>
+                    <p class="mt-2 text-sm text-[var(--muted)]">System architecture, sensor integration, connectivity
+                        (WiFi/BLE/LoRa/cellular), and deployment support.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Portfolio -->
+        <section id="portfolio" class="mt-12">
+            <div class="flex items-center justify-between">
+                <h2 class="text-2xl font-semibold">Portfolio</h2>
+                <p class="text-sm text-[var(--muted)]">Filter by category to explore projects</p>
+            </div>
+
+            <!-- filters -->
+            <div class="mt-4 flex gap-3 flex-wrap">
+                <button class="filter-btn px-3 py-1 text-sm border rounded" data-filter="*">All</button>
+                <button class="filter-btn px-3 py-1 text-sm border rounded" data-filter="hardware">Hardware</button>
+                <button class="filter-btn px-3 py-1 text-sm border rounded" data-filter="firmware">Firmware</button>
+                <button class="filter-btn px-3 py-1 text-sm border rounded" data-filter="iot">IoT</button>
+            </div>
+
+            <!-- projects grid -->
+            <div id="projectsGrid" class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Example project card: add more cards to expand portfolio -->
+                <article class="project-card bg-white rounded-md shadow overflow-hidden" data-categories="hardware,iot">
+                    <img src="/images/1.jpg" alt="Smart Sensor Gateway" class="project-img" />
+                    <div class="p-4">
+                        <h3 class="font-semibold">Smart Sensor Gateway</h3>
+                        <p class="mt-2 text-sm text-[var(--muted)]">ESP32-based gateway with MQTT bridge, secure OTA,
+                            and power management. Designed for remote environmental sensors.</p>
+                        <div class="mt-3 flex items-center justify-between">
+                            <div class="text-xs text-[var(--muted)]">Hardware • Firmware</div>
+                            <button class="openProject text-sm px-3 py-1 border rounded"
+                                data-title="Smart Sensor Gateway"
+                                data-desc="ESP32-based gateway with MQTT bridge, secure OTA, and power management. Includes PCB, enclosure, and test suite."
+                                data-img="https://via.placeholder.com/1200x800.png?text=Smart+Sensor+Gateway">Details</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card bg-white rounded-md shadow overflow-hidden" data-categories="firmware">
+                    <img src="/images/2.jpg" alt="RTOS Motor Control" class="project-img" />
+                    <div class="p-4">
+                        <h3 class="font-semibold">RTOS Motor Control</h3>
+                        <p class="mt-2 text-sm text-[var(--muted)]">STM32 + FreeRTOS motor controller with closed-loop
+                            PID, CAN diagnostics, and bootloader.</p>
+                        <div class="mt-3 flex items-center justify-between">
+                            <div class="text-xs text-[var(--muted)]">Firmware • Embedded</div>
+                            <button class="openProject text-sm px-3 py-1 border rounded" data-title="RTOS Motor Control"
+                                data-desc="STM32 + FreeRTOS motor controller with closed-loop PID, CAN diagnostics, and bootloader."
+                                data-img="https://via.placeholder.com/1200x800.png?text=RTOS+Motor+Control">Details</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card bg-white rounded-md shadow overflow-hidden"
+                    data-categories="hardware,firmware">
+                    <img src="/images/3.jpg" alt="PCB Power Inverter" class="project-img" />
+                    <div class="p-4">
+                        <h3 class="font-semibold">10 kW Off-grid Inverter (Design)</h3>
+                        <p class="mt-2 text-sm text-[var(--muted)]">Schematic and PCB for power stage, gate drivers, and
+                            control board — incl. BOM and thermal analysis.</p>
+                        <div class="mt-3 flex items-center justify-between">
+                            <div class="text-xs text-[var(--muted)]">Hardware • Power</div>
+                            <button class="openProject text-sm px-3 py-1 border rounded"
+                                data-title="10 kW Off-grid Inverter"
+                                data-desc="Schematic and PCB for power stage, gate drivers, and control board — incl. BOM and thermal analysis."
+                                data-img="https://via.placeholder.com/1200x800.png?text=Inverter+PCB">Details</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- project modal -->
+            <div id="projectModal" class="fixed inset-0 hidden z-50 items-center justify-center bg-black/50 p-4">
+                <div class="bg-white max-w-3xl w-full rounded-md overflow-hidden">
+                    <div class="flex items-start justify-between p-4 border-b">
+                        <h3 id="modalTitle" class="font-semibold">Project Title</h3>
+                        <button id="closeModal" class="text-[var(--muted)]">Close</button>
+                    </div>
+                    <div class="p-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
+                        <img id="modalImg" src="" alt="" class="w-full rounded project-img" />
+                        <div>
+                            <p id="modalDesc" class="text-sm text-[var(--muted)]"></p>
+                            <ul class="mt-4 text-sm text-[var(--muted)] list-disc list-inside">
+                                <li>Role: Hardware & Firmware</li>
+                                <li>Tools: ESP32, STM32, KiCad, PlatformIO</li>
+                                <li>Deliverables: Schematics, PCB, Firmware, Test Plan</li>
+                            </ul>
+
+                            <div class="mt-6">
+                                <a id="modalGithub" href="#" target="_blank" rel="noopener"
+                                    class="inline-block px-3 py-2 border rounded">View Repo</a>
+                                <a id="modalCase" href="#"
+                                    class="ml-3 inline-block px-3 py-2 bg-[var(--accent)] text-white rounded">Request
+                                    Info</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="mt-12 mb-16">
+            <div class="rounded-md p-6 bg-white shadow">
+                <h2 class="text-2xl font-semibold">Contact Me</h2>
+                <p class="text-[var(--muted)] mt-2">Ready to discuss your embedded project? Use the form or reach me
+                    directly.</p>
+
+                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <form id="contactForm" class="space-y-4">
+                        <div>
+                            <label class="text-sm">Name</label>
+                            <input name="name" required class="w-full mt-1 p-2 border rounded-md" />
+                        </div>
+                        <div>
+                            <label class="text-sm">Email</label>
+                            <input name="email" type="email" required class="w-full mt-1 p-2 border rounded-md" />
+                        </div>
+                        <div>
+                            <label class="text-sm">Message</label>
+                            <textarea name="message" rows="5" required
+                                class="w-full mt-1 p-2 border rounded-md"></textarea>
+                        </div>
+                        <div>
+                            <!-- By default form uses mailto as fallback. You can replace the form action with Formspree or Netlify Forms endpoint. -->
+                            <button type="submit" class="px-4 py-2 bg-[var(--accent)] text-white rounded-md">Send
+                                Message</button>
+                        </div>
+                    </form>
+
+                    <div>
+                        <h4 class="font-semibold">Direct</h4>
+                        <p class="text-sm text-[var(--muted)] mt-2">Prefer direct contact? Email: <a
+                                href="zakriyazahid@gmail.com">zakriyazahid@gmail.com</a> — I typically respond
+                            within 48 hours.</p>
+
+                        <h4 class="font-semibold mt-6">Resume</h4>
+                        <p class="text-sm text-[var(--muted)] mt-2">Download a one-page resume: <a href="/resume.pdf"
+                                class="underline">Resume (PDF)</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-slate-200 mt-8 py-6">
+        <div
+            class="max-w-6xl mx-auto px-6 text-sm text-[var(--muted)] flex flex-col md:flex-row items-center justify-between gap-4">
+            <div>© <span id="year"></span> Zakriya Zahid. All rights reserved.</div>
+            <div>Built with care • <a href="#portfolio">Selected work</a> • <a
+                    href="https://github.com/yourusername">GitHub</a></div>
+        </div>
+    </footer>
+
+    <script>
+        // small helpers
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile menu
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn && menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+        // Filters
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+        filterBtns.forEach(btn => btn.addEventListener('click', () => {
+            const f = btn.getAttribute('data-filter');
+            filterBtns.forEach(b => b.classList.remove('bg-[var(--accent)', 'text-white']));
+            if (f === '*') {
+                projectCards.forEach(c => c.style.display = '');
+            } else {
+                projectCards.forEach(c => {
+                    const cats = c.dataset.categories.split(',');
+                    c.style.display = cats.includes(f) ? '' : 'none';
+                });
+            }
+        }));
+
+        // Project modal
+        const modal = document.getElementById('projectModal');
+        const openBtns = document.querySelectorAll('.openProject');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDesc = document.getElementById('modalDesc');
+        const modalImg = document.getElementById('modalImg');
+        const closeModal = document.getElementById('closeModal');
+
+        openBtns.forEach(btn => btn.addEventListener('click', () => {
+            modalTitle.textContent = btn.dataset.title;
+            modalDesc.textContent = btn.dataset.desc;
+            modalImg.src = btn.dataset.img;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }));
+
+        closeModal.addEventListener('click', () => { modal.classList.add('hidden'); modal.classList.remove('flex'); });
+        modal.addEventListener('click', (e) => { if (e.target === modal) { modal.classList.add('hidden'); modal.classList.remove('flex'); } });
+
+        // Contact form fallback: open mailto on submit (keeps site static). Replace action with a form endpoint for production.
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const form = new FormData(this);
+            const name = encodeURIComponent(form.get('name'));
+            const email = encodeURIComponent(form.get('email'));
+            const message = encodeURIComponent(form.get('message'));
+            const subject = encodeURIComponent('Website Contact from ' + form.get('name'));
+            const body = encodeURIComponent('Name: ' + form.get('name') + '\nEmail: ' + form.get('email') + '\n\n' + form.get('message'));
+            // mailto fallback (opens user mail client)
+            window.location.href = `mailto:zakriyazahid@gmail.com?subject=${subject}&body=${body}`;
+        });
+
+        // Accessibility: keyboard close modal
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { modal.classList.add('hidden'); modal.classList.remove('flex'); } });
+
+    </script>
+</body>
+
+</html>
