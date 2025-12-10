@@ -6,9 +6,9 @@
             "iot",
             "firmware"
         ],
-        "thumb": "/images/1.jpg",
+        "thumb": "/images/LoRA Mesh Device/3d_4.jpg",
         "description": "ESP32-based gateway with MQTT bridge, secure OTA, and power management. Designed for remote environmental sensors.",
-        "modal_image": "/images/1.jpg",
+        "modal_image": "/images/LoRA Mesh Device/3d_3.jpg",
         "full_description": "ESP32-based gateway with MQTT bridge, secure OTA, and power management. Includes PCB, enclosure, and test suite.",
         "tags": "Hardware • Firmware • Lvgl • Esp32",
         "repo": "https://github.com/yourname/sensor-gateway"
@@ -18,9 +18,9 @@
         "categories": [
             "hardware"
         ],
-        "thumb": "/images/3.jpg",
+        "thumb": "/images/Power Scheduler/3d_2.jpg",
         "description": "STM32 + FreeRTOS motor controller with closed-loop PID, CAN diagnostics, and bootloader.",
-        "modal_image": "/images/2.jpg",
+        "modal_image": "/images/Power Scheduler/3d_3.jpg",
         "full_description": "STM32 + FreeRTOS motor controller with closed-loop PID, CAN diagnostics, and bootloader.",
         "tags": "Firmware • Embedded",
         "repo": "https://github.com/yourname/rtos-motor-control"
@@ -30,9 +30,9 @@
         "categories": [
             "hardware"
         ],
-        "thumb": "/images/1.jpg",
+        "thumb": "/images/Music Synthesizer/3d_1.jpg",
         "description": "Schematic and PCB for power stage, gate drivers, and control board — incl. BOM and thermal analysis.",
-        "modal_image": "/images/3.png",
+        "modal_image": "/images/Music Synthesizer/3d_4.png",
         "full_description": "10 kW off-grid inverter power board design including high-current layout, gate-driver isolation, protection sensing and temperature management.",
         "tags": "Hardware • Power",
         "repo": "https://github.com/yourname/inverter-design"
@@ -43,9 +43,9 @@
             "hardware",
             "firmware"
         ],
-        "thumb": "/images/3.jpg",
+        "thumb": "/images/Qwerty Keyboard/3d_1.jpg",
         "description": "STM32 + FreeRTOS motor controller with closed-loop PID, CAN diagnostics, and bootloader.",
-        "modal_image": "/images/2.jpg",
+        "modal_image": "/images/Qwerty Keyboard/3d_2.jpg",
         "full_description": "STM32 + FreeRTOS motor controller with closed-loop PID, CAN diagnostics, and bootloader.",
         "tags": "Firmware • Embedded",
         "repo": "https://github.com/yourname/rtos-motor-control"
